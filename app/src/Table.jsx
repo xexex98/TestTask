@@ -1,22 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { tableData } from "./atom";
 import { Cell } from "./Cell";
 
 export const Table = () => {
-  const [data, setData] = useRecoilState(tableData);
-
-  useEffect(() => {
-    setData([
-      { name: "Пройти интервью с HR", status: "done", dateCreate: 1573222952025, dateClose: 1573222972009 },
-      { name: "Выполнить тестовое задание", status: "progress", dateCreate: 1573222983361, dateClose: null },
-      { name: "Трудоустроиться в Сбербанк", status: "open", dateCreate: null, dateClose: null },
-      { name: "Пройти испытательный срок", status: "open", dateCreate: null, dateClose: null },
-      { name: "Успешно завершить прооект", status: "open", dateCreate: null, dateClose: null },
-      { name: "Получить повышение", status: "open", dateCreate: null, dateClose: null },
-    ]);
-  }, []);
+  const data = useRecoilValue(tableData);
 
   return (
     <>
