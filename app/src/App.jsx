@@ -1,11 +1,11 @@
+import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import { Home } from "./Home";
-import { Table } from "./Table";
 import { RoutesDOM } from "./RoutesDOM";
-import React from "react";
-import Sidebar from "./Sidebar/Sidebar";
+import Sidebar from "./Sidebar";
+import { Table } from "./Table";
 
-const Wrapper = ({ children }: React.PropsWithChildren) => {
+const Wrapper = ({ children }) => {
   return (
     <div>
       <Sidebar />

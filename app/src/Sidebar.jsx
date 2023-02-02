@@ -40,7 +40,9 @@ const Sidebar = () => {
           <Link className="relative hover:translate-x-2" to={"/table"}>
             Table
           </Link>
-          <Link to={"https://thiscatdoesnotexist.com/"}>Meow!</Link>
+          <Link to={"https://thiscatdoesnotexist.com/"} className="relative hover:translate-x-2">
+            Meow!
+          </Link>
         </div>
       </div>
     </>
